@@ -18,8 +18,8 @@
     </thead>
     <tbody >
       <tr *ngFor= 'let societe of societes; let i = index'>
-        <td routerLink="/details/{{i}}">{{societe.title}}</td>
-        <td routerLink="/details/{{i}}">{{societe.body}}</td>
+        <td routerLink="/details/{{societe.id}}">{{societe.title}}</td>
+        <td routerLink="/details/{{societe.id}}">{{societe.body}}</td>
         <th scope="col"><button mat-mini-fab color="primary" (click)='update(societe.id)' aria-label="Example icon button with a filter list icon">
             <mat-icon>edit</mat-icon>
           </button>
