@@ -1,0 +1,31 @@
+<div id="myDIV" class="header">
+  <button mat-fab color="accent" (click)="logout()" aria-label="Example icon button with a delete icon">
+    <mat-icon>input</mat-icon>
+</button>
+    <h2>My To Do List</h2>
+    <!-- <input type="text" id="myInput" placeholder="Title..."> -->
+    <button mat-fab color="primary" (click)="addTodo()" aria-label="Example icon button with a delete icon">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Secteur d'activité</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor= 'let societe of societes; let i = index'>
+        <td routerLink="/details/{{i}}">{{societe.title}}</td>
+        <td routerLink="/details/{{i}}">{{societe.body}}</td>
+        <th scope="col"><button mat-mini-fab color="primary" (click)='update(societe.id)' aria-label="Example icon button with a filter list icon">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-mini-fab color="warn" (click)='delete(societe.id)' aria-label="Example icon button with a filter list icon">
+            <mat-icon>delete</mat-icon>
+          </button></th>
+      </tr>
+    </tbody>
+  </table>

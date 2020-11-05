@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>   Update Societé</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="SocieteupdateForm" >
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="Name" formControlName="title" required>
+          <mat-error>
+            Please provide a valid Name
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input matInput type="text
+          " placeholder="Secteur d'activité" formControlName="body" required>
+          <mat-error>
+            Please provide a valid Secteur d'activité
+          </mat-error>
+        </mat-form-field>
+        <!-- <mat-form-field class="full-width-input">
+            <textarea matInput rows="5" placeholder="descrption..." formControlName="descrption"></textarea>
+            <mat-error>
+              Please provide a valid description
+            </mat-error>
+          </mat-form-field> -->
+       <!-- <button mat-raised-button color="primary" >Login</button> -->
+      </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" (click)='update()'  cdkFocusInitial>Update</button>
+</mat-dialog-actions>
